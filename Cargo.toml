@@ -5,6 +5,7 @@ members = ["app"]
 name = "mm3h"
 version = "0.1.0"
 edition = "2024"
+description = "Murmur3 optimized hasher"
 keywords = ["hash", "murmur3", "murmur"]
 license = "BSD-3-Clause OR Apache-2.0"
 authors = ["Radzivon Bartoshyk"]
