@@ -5,8 +5,7 @@
  * // license that can be found in the LICENSE file.
  */
 use criterion::{Criterion, criterion_group, criterion_main};
-use mm3h::Murmur3Hasher;
-use std::hash::Hasher;
+use mm3h::murmurhash3_32;
 
 pub fn criterion_benchmark(c: &mut Criterion) {
     c.benchmark_group("Hash");
@@ -33,9 +32,7 @@ The current version, completed April 3, 2011, is MurmurHash3,[12][13] which yiel
 
     c.bench_function("murmurhash32", |b| {
         b.iter(|| {
-            let mut hasher = Murmur3Hasher::default();
-            hasher.write(&v);
-            _ = hasher.finish();
+            _ = murmurhash3_32(&v);
         })
     });
 }

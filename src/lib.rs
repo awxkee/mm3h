@@ -37,4 +37,4 @@ mod sse;
 #[cfg(all(target_arch = "x86_64", feature = "avx"))]
 mod avx;
 
-pub use hasher::Murmur3Hasher;
+pub use hasher::{Murmur3Hasher, murmurhash3_32, murmurhash3_32_with_seed};
