@@ -3,8 +3,8 @@ Murmur3Hasher
 A Rust implementation of MurmurHash3 with platform-specific SIMD optimizations (NEON, AVX2, SSE2). This crate provides a Hasher compatible struct that can be used with Rust's hashing APIs.
 
 ```rust
-use std::hash::{Hasher, Hash};
 use mm3h::Murmur3Hasher;
+use std::hash::Hasher;
 
 fn main() {
     let mut hasher = Murmur3Hasher::new_with_seed(42);
