@@ -4,7 +4,7 @@ A Rust implementation of MurmurHash3 with platform-specific SIMD optimizations (
 
 ```rust
 use std::hash::{Hasher, Hash};
-use murmur3_hasher::Murmur3Hasher;
+use mm3h::Murmur3Hasher;
 
 fn main() {
     let mut hasher = Murmur3Hasher::new_with_seed(42);
