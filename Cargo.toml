@@ -23,3 +23,9 @@ default = ["neon", "avx", "sse"]
 avx = []
 neon = []
 sse = []
+
+[package.metadata.docs.rs]
+# To build locally:
+# RUSTDOCFLAGS="--cfg docsrs" cargo +nightly doc --all-features --no-deps --open
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
