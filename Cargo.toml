@@ -1,0 +1,24 @@
+[workspace]
+members = ["app"]
+
+[package]
+name = "mm3h"
+version = "0.1.0"
+edition = "2024"
+keywords = ["hash", "murmur3", "murmur"]
+license = "BSD-3-Clause OR Apache-2.0"
+authors = ["Radzivon Bartoshyk"]
+documentation = "https://github.com/awxkee/mm3h"
+categories = ["algorithms"]
+homepage = "https://github.com/awxkee/mm3h"
+repository = "https://github.com/awxkee/mm3h"
+exclude = ["*.jpg", "/assets", "*.png", "*.sh", "/assets/*"]
+rust-version = "1.87.0"
+
+[dependencies]
+
+[features]
+default = ["neon", "avx", "sse"]
+avx = []
+neon = []
+sse = []
