@@ -59,8 +59,6 @@ pub struct Murmur3Hasher {
 /// # Returns
 /// A 32-bit hash value derived from the input and the seed.
 ///
-/// ```
-///
 /// # Notes
 /// - Using different seeds for the same input will yield different hash values.
 /// - This function implements the **MurmurHash3 x86_32** variant.
