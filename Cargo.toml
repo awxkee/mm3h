@@ -13,6 +13,7 @@ categories = ["algorithms"]
 homepage = "https://github.com/awxkee/mm3h"
 repository = "https://github.com/awxkee/mm3h"
 exclude = ["*.jpg", "/assets", "*.png", "*.sh", "/assets/*"]
+include = ["/src/", "/README.md", "/LICENSE.md", "/LICENSE-APACHE.md"]
 rust-version = "1.87.0"
 
 [dependencies]
