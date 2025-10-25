@@ -73,7 +73,7 @@ fn murmurhash3_128_with_seed_impl(bytes: &[u8], seed: u32) -> u128 {
 
     let remainder = bytes.chunks_exact(16).remainder();
 
-    if remainder.len() > 0 {
+    if !remainder.is_empty() {
         let len = remainder.len();
 
         let mut k1 = 0;
