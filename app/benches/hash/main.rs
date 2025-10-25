@@ -5,7 +5,7 @@
  * // license that can be found in the LICENSE file.
  */
 use criterion::{Criterion, criterion_group, criterion_main};
-use mm3h::murmurhash3_32;
+use mm3h::{murmurhash2_64, murmurhash3_32};
 
 pub fn criterion_benchmark(c: &mut Criterion) {
     c.benchmark_group("Hash");
@@ -30,9 +30,24 @@ The current version, completed April 3, 2011, is MurmurHash3,[12][13] which yiel
 
     let v = bench_test.as_bytes().to_vec();
 
+    let very_short_key = "MurmurHash2MurmurHash2";
+    let v_short = very_short_key.as_bytes().to_vec();
+
     c.bench_function("murmurhash32", |b| {
         b.iter(|| {
             _ = murmurhash3_32(&v);
+        })
+    });
+
+    c.bench_function("murmurhash32_small", |b| {
+        b.iter(|| {
+            _ = murmurhash3_32(&v_short);
+        })
+    });
+
+    c.bench_function("murmurhash64a", |b| {
+        b.iter(|| {
+            _ = murmurhash2_64(&v);
         })
     });
 }
