@@ -36,7 +36,9 @@ mod sse;
 
 #[cfg(all(target_arch = "x86_64", feature = "avx"))]
 mod avx;
+mod generic128;
 mod generic64;
 
 pub use generic64::{murmurhash2_64, murmurhash2_64_with_seed};
+pub use generic128::{murmurhash3_128, murmurhash3_128_with_seed};
 pub use hasher::{Murmur3Hasher, murmurhash3_32, murmurhash3_32_with_seed};

@@ -3,7 +3,7 @@ members = ["app"]
 
 [package]
 name = "mm3h"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2024"
 description = "Murmur3 optimized hasher"
 keywords = ["hash", "murmur3", "murmur"]
